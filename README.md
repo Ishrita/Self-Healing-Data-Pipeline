@@ -10,7 +10,7 @@ A data pipeline that doesn't crash the moment an upstream team renames a column.
 
 Traditional pipelines are rigid. If code expects `['id', 'price', 'transaction_date']` and receives `['user_id', 'cost', 'date_of_purchase']`, the script throws a `KeyError` and stops. Someone gets paged, a sprint gets derailed fixing a fragile mapping — for what is often just a renamed column.
 
-## ✨ How It Works
+##  How It Works
 
 1. **Detection** — the pipeline compares incoming data columns to the expected schema.
 2. **Evaluation** — on a mismatch, the expected and actual schemas are passed to a lightweight local LLM.
@@ -27,7 +27,7 @@ Only column **names** are sent to the LLM — never row-level data — so infere
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 self-healing-data-pipeline/
@@ -40,7 +40,7 @@ self-healing-data-pipeline/
 
 ---
 
-## ⚙️ Requirements
+##  Requirements
 
 - Python 3.9+
 - [Ollama](https://ollama.com/download) installed and running locally
@@ -48,7 +48,7 @@ self-healing-data-pipeline/
 
 ---
 
-## 🚀 Setup
+##  Setup
 
 ### 1. Clone the repo
 
@@ -90,7 +90,7 @@ You should see the schema mismatch get detected, healed via the LLM mapping, and
 
 ---
 
-## 📋 Example
+##  Example
 
 **Expected schema:**
 ```python
